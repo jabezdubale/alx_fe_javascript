@@ -14,13 +14,15 @@ function showRandomQuote() {
   const catagoryParagraph = document.createElement("p");
   const randomNumber = Math.floor(Math.random() * quotes.length);
   quoteParagraph.textContent = "Quote: " + quotes[randomNumber].quote;
-  catagoryParagraph.textContent = "Catagory: " + quotes[randomNumber].category;
+  catagoryParagraph.textContent = "Category: " + quotes[randomNumber].category;
   quoteDisplay.append(quoteParagraph);
   quoteDisplay.append(catagoryParagraph);
-  createAddQuoteForm();
+  const formContainer = document.getElementById("formContainer");
+  if (!formContainer) createAddQuoteForm();
 }
 function createAddQuoteForm() {
   const formContainer = document.createElement("div");
+  formContainer.setAttribute("id", "formContainer");
   const quoteRequest = document.createElement("input");
   quoteRequest.setAttribute("id", "newQuoteText");
   quoteRequest.setAttribute("type", "text");
@@ -32,10 +34,12 @@ function createAddQuoteForm() {
   const addNewQuoteButton = document.createElement("button");
   addNewQuoteButton.innerText = "Add Quote";
   addNewQuoteButton.setAttribute("onclick", "addQuote()");
+  const breaker = document.createElement("br");
+  formContainer.append(breaker);
   formContainer.append(quoteRequest);
   formContainer.append(catagoryRequest);
   formContainer.append(addNewQuoteButton);
-  quoteDisplay.appendChild(formContainer);
+  document.body.appendChild(formContainer);
 }
 
 function addQuote() {
@@ -50,3 +54,6 @@ function addQuote() {
   quoteRequest.value = "";
   catagoryRequest.value = "";
 }
+
+//create the add quote form only once
+//work on last viewed session storage
