@@ -35,9 +35,9 @@ const quotes = [
 const quoteDisplay = document.getElementById("quoteDisplay");
 const showQuoteButton = document.getElementById("newQuote");
 
-showQuoteButton.addEventListener("click", displayRandomQuote);
+showQuoteButton.addEventListener("click", showRandomQuote);
 
-function displayRandomQuote() {
+function showRandomQuote() {
   quoteDisplay.innerHTML = "";
   const quoteParagraph = document.createElement("p");
   const catagoryParagraph = document.createElement("p");
