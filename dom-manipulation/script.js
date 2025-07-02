@@ -63,5 +63,5 @@ function createAddQuoteForm() {
   formContainer.append(quoteRequest);
   formContainer.append(catagoryRequest);
   formContainer.append(addNewQuoteButton);
-  quoteDisplay.append(formContainer);
+  document.body.append(formContainer);
 }
