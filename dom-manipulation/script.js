@@ -1,35 +1,7 @@
-const quotes = [
+const quotes = JSON.parse(localStorage.getItem("quotes")) || [
   {
-    quote: "quote 1",
-    category: "catagory 1",
-  },
-  {
-    quote: "quote 2",
-    category: "catagory 2",
-  },
-  {
-    quote: "quote 3",
-    category: "catagory 3",
-  },
-  {
-    quote: "quote 4",
-    category: "catagory 1",
-  },
-  {
-    quote: "quote 5",
-    category: "catagory 2",
-  },
-  {
-    quote: "quote 6",
-    category: "catagory 3",
-  },
-  {
-    quote: "quote 7",
-    category: "catagory 1",
-  },
-  {
-    quote: "quote 8",
-    category: "catagory 2",
+    quote: "",
+    category: "",
   },
 ];
 const quoteDisplay = document.getElementById("quoteDisplay");
@@ -64,4 +36,17 @@ function createAddQuoteForm() {
   formContainer.append(catagoryRequest);
   formContainer.append(addNewQuoteButton);
   quoteDisplay.appendChild(formContainer);
+}
+
+function addQuote() {
+  const quoteRequest = document.getElementById("newQuoteText");
+  const catagoryRequest = document.getElementById("newQuoteCategory");
+  const quoteObject = {
+    quote: quoteRequest.value,
+    category: catagoryRequest.value,
+  };
+  quotes.push(quoteObject);
+  localStorage.setItem("quotes", JSON.stringify(quotes));
+  quoteRequest.value = "";
+  catagoryRequest.value = "";
 }
