@@ -34,7 +34,7 @@ const quotes = [
 ];
 const quoteDisplay = document.getElementById("quoteDisplay");
 const showQuoteButton = document.getElementById("newQuote");
-
+const addNewQuoteButton = document.getElementById("");
 showQuoteButton.addEventListener("click", showRandomQuote);
 
 function showRandomQuote() {
@@ -46,4 +46,7 @@ function showRandomQuote() {
   catagoryParagraph.textContent = "Catagory: " + quotes[randomNumber].category;
   quoteDisplay.append(quoteParagraph);
   quoteDisplay.append(catagoryParagraph);
+}
+function createAddQuoteForm() {
+  console.log("");
 }
