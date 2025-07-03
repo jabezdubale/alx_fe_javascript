@@ -21,8 +21,21 @@ function populateCategories() {
   });
 }
 
-function filterQuotes() {}
+function filterQuotes() {
+  const selectedCategory = categoryFilter.value;
+  localStorage.setItem("selectedCategory", selectedCategory);
+  showRandomQuote();
+}
 function showRandomQuote() {
+  const selectedCategory = localStorage.getItem("selectedCategory");
+  let filtred;
+  if (!selectedCategory || selectedCategory === "all") {
+    filtred = quotes;
+  } else {
+    filtred = quotes.filter((e) => {
+      return e.category === selectedCategory;
+    });
+  }
   quoteDisplay.innerHTML = "";
   if (quotes.length === 0) {
     const showError = document.createElement("p");
@@ -32,10 +45,10 @@ function showRandomQuote() {
   } else {
     const quoteParagraph = document.createElement("p");
     const catagoryParagraph = document.createElement("p");
-    const randomNumber = Math.floor(Math.random() * quotes.length);
-    quoteParagraph.textContent = "Quote: " + quotes[randomNumber].quote;
+    const randomNumber = Math.floor(Math.random() * filtred.length);
+    quoteParagraph.textContent = "Quote: " + filtred[randomNumber].quote;
     catagoryParagraph.textContent =
-      "Category: " + quotes[randomNumber].category;
+      "Category: " + filtred[randomNumber].category;
     quoteDisplay.append(quoteParagraph);
     quoteDisplay.append(catagoryParagraph);
   }
