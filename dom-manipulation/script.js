@@ -9,6 +9,7 @@ downloadQuotes.addEventListener("click", exportJson);
 
 populateCategories();
 function populateCategories() {
+  const selectedCategory = localStorage.getItem("selectedCategory");
   const allCategories = quotes.map((e) => e.category);
   const filteredArray = allCategories.filter((v, i, a) => {
     return a.indexOf(v) === i;
@@ -19,6 +20,11 @@ function populateCategories() {
     option.textContent = e;
     categoryFilter.append(option);
   });
+  if (selectedCategory) {
+    categoryFilter.value = selectedCategory;
+  } else {
+    categoryFilter.value = "all";
+  }
 }
 
 function filterQuotes() {
@@ -28,6 +34,7 @@ function filterQuotes() {
 }
 function showRandomQuote() {
   const selectedCategory = localStorage.getItem("selectedCategory");
+
   let filtred;
   if (!selectedCategory || selectedCategory === "all") {
     filtred = quotes;
@@ -88,6 +95,7 @@ function addQuote() {
   localStorage.setItem("quotes", JSON.stringify(quotes));
   quoteRequest.value = "";
   catagoryRequest.value = "";
+  populateCategories();
 }
 
 function exportJson() {
