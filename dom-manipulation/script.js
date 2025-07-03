@@ -70,4 +70,17 @@ function exportJson() {
   URL.revokeObjectURL(blobUrl);
 }
 
+function importFromJsonFile(event) {
+  const file = event.target.files[0];
+  const fileReader = new FileReader();
+  fileReader.onload = (event) => {
+    const importedQuotes = JSON.parse(event.target.result);
+    quotes.push(...importedQuotes);
+    localStorage.setItem("quotes", JSON.stringify(quotes));
+    alert("Quotes imported successfully!");
+  };
+  fileReader.readAsText(file);
+  event.target.value = "";
+}
+
 //work on last viewed session storage
