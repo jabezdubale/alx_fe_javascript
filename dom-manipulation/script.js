@@ -2,10 +2,26 @@ const quotes = JSON.parse(localStorage.getItem("quotes")) || [];
 const quoteDisplay = document.getElementById("quoteDisplay");
 const showQuoteButton = document.getElementById("newQuote");
 const downloadQuotes = document.getElementById("exportQuotes");
+const categoryFilter = document.getElementById("categoryFilter");
 
 showQuoteButton.addEventListener("click", showRandomQuote);
 downloadQuotes.addEventListener("click", exportJson);
 
+populateCategories();
+function populateCategories() {
+  const allCategories = quotes.map((e) => e.category);
+  const filteredArray = allCategories.filter((v, i, a) => {
+    return a.indexOf(v) === i;
+  });
+  filteredArray.forEach((e) => {
+    const option = document.createElement("option");
+    option.value = e;
+    option.textContent = e;
+    categoryFilter.append(option);
+  });
+}
+
+function filterQuotes() {}
 function showRandomQuote() {
   quoteDisplay.innerHTML = "";
   if (quotes.length === 0) {
