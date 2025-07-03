@@ -1,9 +1,4 @@
-const quotes = JSON.parse(localStorage.getItem("quotes")) || [
-  {
-    quote: "",
-    category: "",
-  },
-];
+const quotes = JSON.parse(localStorage.getItem("quotes")) || [];
 const quoteDisplay = document.getElementById("quoteDisplay");
 const showQuoteButton = document.getElementById("newQuote");
 const downloadQuotes = document.getElementById("exportQuotes");
@@ -13,13 +8,21 @@ downloadQuotes.addEventListener("click", exportJson);
 
 function showRandomQuote() {
   quoteDisplay.innerHTML = "";
-  const quoteParagraph = document.createElement("p");
-  const catagoryParagraph = document.createElement("p");
-  const randomNumber = Math.floor(Math.random() * quotes.length);
-  quoteParagraph.textContent = "Quote: " + quotes[randomNumber].quote;
-  catagoryParagraph.textContent = "Category: " + quotes[randomNumber].category;
-  quoteDisplay.append(quoteParagraph);
-  quoteDisplay.append(catagoryParagraph);
+  if (quotes.length === 0) {
+    const showError = document.createElement("p");
+    showError.innerText =
+      "Please add a quote or import a .json file that have quotes";
+    quoteDisplay.append(showError);
+  } else {
+    const quoteParagraph = document.createElement("p");
+    const catagoryParagraph = document.createElement("p");
+    const randomNumber = Math.floor(Math.random() * quotes.length);
+    quoteParagraph.textContent = "Quote: " + quotes[randomNumber].quote;
+    catagoryParagraph.textContent =
+      "Category: " + quotes[randomNumber].category;
+    quoteDisplay.append(quoteParagraph);
+    quoteDisplay.append(catagoryParagraph);
+  }
   const formContainer = document.getElementById("formContainer");
   if (!formContainer) createAddQuoteForm();
 }
