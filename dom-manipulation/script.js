@@ -6,7 +6,10 @@ const quotes = JSON.parse(localStorage.getItem("quotes")) || [
 ];
 const quoteDisplay = document.getElementById("quoteDisplay");
 const showQuoteButton = document.getElementById("newQuote");
+const downloadQuotes = document.getElementById("exportQuotes");
+
 showQuoteButton.addEventListener("click", showRandomQuote);
+downloadQuotes.addEventListener("click", exportJson);
 
 function showRandomQuote() {
   quoteDisplay.innerHTML = "";
@@ -55,5 +58,16 @@ function addQuote() {
   catagoryRequest.value = "";
 }
 
-//create the add quote form only once
+function exportJson() {
+  const anchor = document.createElement("a");
+  const blobFile = new Blob([JSON.stringify(quotes, null, 2)], {
+    type: "application/json",
+  });
+  const blobUrl = URL.createObjectURL(blobFile);
+  anchor.href = blobUrl;
+  anchor.setAttribute("download", "JsonFile.json");
+  anchor.click();
+  URL.revokeObjectURL(blobUrl);
+}
+
 //work on last viewed session storage
