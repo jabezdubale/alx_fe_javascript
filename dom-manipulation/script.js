@@ -33,6 +33,7 @@ async function fetchQuotesFromServer() {
         quotes = data;
         localStorage.setItem("quotes", JSON.stringify(quotes));
         populateCategories();
+        alert("Quotes synced with server!");
       }
     }
   } catch (error) {
