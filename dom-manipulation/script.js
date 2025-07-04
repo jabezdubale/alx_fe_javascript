@@ -1,4 +1,4 @@
-const quotes = JSON.parse(localStorage.getItem("quotes")) || [];
+let quotes = JSON.parse(localStorage.getItem("quotes")) || [];
 const quoteDisplay = document.getElementById("quoteDisplay");
 const showQuoteButton = document.getElementById("newQuote");
 const downloadQuotes = document.getElementById("exportQuotes");
@@ -6,8 +6,52 @@ const categoryFilter = document.getElementById("categoryFilter");
 
 showQuoteButton.addEventListener("click", showRandomQuote);
 downloadQuotes.addEventListener("click", exportJson);
-
-populateCategories();
+fetchQuotesFromServer();
+async function fetchQuotesFromServer() {
+  try {
+    const response = await fetch("http://localhost:3000/quotes");
+    if (!response.ok) {
+      throw new Error("response status: " + response.status);
+    }
+    const data = await response.json();
+    const isDataSame = dataSimilarityChecker(data);
+    if (isDataSame === true) {
+      populateCategories();
+    } else {
+      const wantToMerge = confirm(
+        "Fetched quotes and your quotes are not similar. Do you want to make them similar?"
+      );
+      if (wantToMerge) {
+        quotes = data;
+        localStorage.setItem("quotes", JSON.stringify(quotes));
+        populateCategories();
+      }
+    }
+  } catch (error) {
+    console.error("Error: ", error.message);
+  }
+}
+function dataSimilarityChecker(data) {
+  let checker = true;
+  if (data.length !== quotes.length) return false;
+  data.forEach((e, i) => {
+    if (JSON.stringify(quotes[i]) !== JSON.stringify(e)) checker = false;
+  });
+  return checker;
+}
+async function poster(data) {
+  try {
+    const response = await fetch("http://localhost:3000/quotes", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (error) {
+    console.error("Error: ", error.message);
+  }
+}
 function populateCategories() {
   const selectedCategory = localStorage.getItem("selectedCategory");
   const allCategories = quotes.map((e) => e.category);

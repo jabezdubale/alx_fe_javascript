@@ -1,0 +1,392 @@
+{
+  "quotes": [
+    {
+      "quote": "Be yourself; everyone else is already taken.",
+      "category": "inspirational"
+    },
+    {
+      "quote": "I'm not arguing, I'm just explaining why I'm right.",
+      "category": "funny"
+    },
+    {
+      "quote": "Do one thing every day that scares you.",
+      "category": "motivational"
+    },
+    {
+      "quote": "If you tell the truth, you don't have to remember anything.",
+      "category": "wisdom"
+    },
+    {
+      "quote": "To succeed in life, you need two things: ignorance and confidence.",
+      "category": "life"
+    },
+    {
+      "quote": "You miss 100% of the shots you don’t take.",
+      "category": "success"
+    },
+    {
+      "quote": "Life is what happens when you’re busy making other plans.",
+      "category": "humor"
+    },
+    {
+      "quote": "The only way to do great work is to love what you do.",
+      "category": "philosophy"
+    },
+    {
+      "quote": "I can resist everything except temptation.",
+      "category": "love"
+    },
+    {
+      "quote": "Always forgive your enemies; nothing annoys them so much.",
+      "category": "creativity"
+    },
+    {
+      "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+      "category": "inspirational"
+    },
+    {
+      "quote": "A day without laughter is a day wasted.",
+      "category": "funny"
+    },
+    {
+      "quote": "In the middle of difficulty lies opportunity.",
+      "category": "motivational"
+    },
+    {
+      "quote": "The best way to predict the future is to invent it.",
+      "category": "wisdom"
+    },
+    {
+      "quote": "I have not failed. I've just found 10,000 ways that won't work.",
+      "category": "life"
+    },
+    {
+      "quote": "It is never too late to be what you might have been.",
+      "category": "success"
+    },
+    {
+      "quote": "The secret of getting ahead is getting started.",
+      "category": "humor"
+    },
+    {
+      "quote": "Imagination is more important than knowledge.",
+      "category": "philosophy"
+    },
+    {
+      "quote": "Why fit in when you were born to stand out?",
+      "category": "love"
+    },
+    {
+      "quote": "A person who never made a mistake never tried anything new.",
+      "category": "creativity"
+    },
+    {
+      "quote": "Happiness is not something ready-made. It comes from your own actions.",
+      "category": "inspirational"
+    },
+    {
+      "quote": "The only thing we have to fear is fear itself.",
+      "category": "funny"
+    },
+    {
+      "quote": "Not all those who wander are lost.",
+      "category": "motivational"
+    },
+    {
+      "quote": "Injustice anywhere is a threat to justice everywhere.",
+      "category": "wisdom"
+    },
+    {
+      "quote": "The purpose of our lives is to be happy.",
+      "category": "life"
+    },
+    {
+      "quote": "Turn your wounds into wisdom.",
+      "category": "success"
+    },
+    {
+      "quote": "I would rather die of passion than of boredom.",
+      "category": "humor"
+    },
+    {
+      "quote": "You only live once, but if you do it right, once is enough.",
+      "category": "philosophy"
+    },
+    {
+      "quote": "Life is short. Smile while you still have teeth.",
+      "category": "love"
+    },
+    {
+      "quote": "I'm not great at the advice. Can I interest you in a sarcastic comment?",
+      "category": "creativity"
+    },
+    {
+      "quote": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+      "category": "inspirational"
+    },
+    {
+      "quote": "Try to be a rainbow in someone’s cloud.",
+      "category": "funny"
+    },
+    {
+      "quote": "Don’t count the days, make the days count.",
+      "category": "motivational"
+    },
+    {
+      "quote": "Everything you can imagine is real.",
+      "category": "wisdom"
+    },
+    {
+      "quote": "Dream big and dare to fail.",
+      "category": "life"
+    },
+    {
+      "quote": "Act as if what you do makes a difference. It does.",
+      "category": "success"
+    },
+    {
+      "quote": "Doubt kills more dreams than failure ever will.",
+      "category": "humor"
+    },
+    {
+      "quote": "The way to get started is to quit talking and begin doing.",
+      "category": "philosophy"
+    },
+    {
+      "quote": "Only a life lived for others is a life worthwhile.",
+      "category": "love"
+    },
+    {
+      "quote": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+      "category": "creativity"
+    },
+    {
+      "quote": "Life isn’t about getting and having, it’s about giving and being.",
+      "category": "inspirational"
+    },
+    {
+      "quote": "You can't go back and change the beginning, but you can start where you are and change the ending.",
+      "category": "funny"
+    },
+    {
+      "quote": "If opportunity doesn’t knock, build a door.",
+      "category": "motivational"
+    },
+    {
+      "quote": "A clear conscience is usually the sign of a bad memory.",
+      "category": "wisdom"
+    },
+    {
+      "quote": "Behind every great man is a woman rolling her eyes.",
+      "category": "life"
+    },
+    {
+      "quote": "I’m not lazy, I’m on energy-saving mode.",
+      "category": "success"
+    },
+    {
+      "quote": "Nothing is impossible. The word itself says 'I’m possible!'",
+      "category": "humor"
+    },
+    {
+      "quote": "Be the change that you wish to see in the world.",
+      "category": "philosophy"
+    },
+    {
+      "quote": "The best revenge is massive success.",
+      "category": "love"
+    },
+    {
+      "quote": "When you reach the end of your rope, tie a knot in it and hang on.",
+      "category": "creativity"
+    },
+    {
+      "quote": "Life is made of ever so many partings welded together.",
+      "category": "inspirational"
+    },
+    {
+      "quote": "Don’t cry because it’s over, smile because it happened.",
+      "category": "funny"
+    },
+    {
+      "quote": "The mind is everything. What you think you become.",
+      "category": "motivational"
+    },
+    {
+      "quote": "Every strike brings me closer to the next home run.",
+      "category": "wisdom"
+    },
+    {
+      "quote": "The harder I work, the luckier I get.",
+      "category": "life"
+    },
+    {
+      "quote": "Everything has beauty, but not everyone sees it.",
+      "category": "success"
+    },
+    {
+      "quote": "If you judge people, you have no time to love them.",
+      "category": "humor"
+    },
+    {
+      "quote": "Silence is better than unnecessary drama.",
+      "category": "philosophy"
+    },
+    {
+      "quote": "You don’t have to be great to start, but you have to start to be great.",
+      "category": "love"
+    },
+    {
+      "quote": "Opportunities don’t happen, you create them.",
+      "category": "creativity"
+    },
+    {
+      "quote": "Stay hungry, stay foolish.",
+      "category": "inspirational"
+    },
+    {
+      "quote": "The journey of a thousand miles begins with one step.",
+      "category": "funny"
+    },
+    {
+      "quote": "Hardships often prepare ordinary people for an extraordinary destiny.",
+      "category": "motivational"
+    },
+    {
+      "quote": "To handle yourself, use your head; to handle others, use your heart.",
+      "category": "wisdom"
+    },
+    {
+      "quote": "What you do today can improve all your tomorrows.",
+      "category": "life"
+    },
+    {
+      "quote": "An unexamined life is not worth living.",
+      "category": "success"
+    },
+    {
+      "quote": "I think, therefore I am.",
+      "category": "humor"
+    },
+    {
+      "quote": "Don’t wait. The time will never be just right.",
+      "category": "philosophy"
+    },
+    {
+      "quote": "Whether you think you can or you think you can’t, you’re right.",
+      "category": "love"
+    },
+    {
+      "quote": "A goal without a plan is just a wish.",
+      "category": "creativity"
+    },
+    {
+      "quote": "If you want to lift yourself up, lift up someone else.",
+      "category": "inspirational"
+    },
+    {
+      "quote": "Limit your ‘always’ and your ‘nevers’.",
+      "category": "funny"
+    },
+    {
+      "quote": "Be yourself—everyone else is taken.",
+      "category": "motivational"
+    },
+    {
+      "quote": "There is no traffic jam along the extra mile.",
+      "category": "wisdom"
+    },
+    {
+      "quote": "Motivation is what gets you started. Habit is what keeps you going.",
+      "category": "life"
+    },
+    {
+      "quote": "The best way out is always through.",
+      "category": "success"
+    },
+    {
+      "quote": "Success usually comes to those who are too busy to be looking for it.",
+      "category": "humor"
+    },
+    {
+      "quote": "Don’t let yesterday take up too much of today.",
+      "category": "philosophy"
+    },
+    {
+      "quote": "Sometimes you win, sometimes you learn.",
+      "category": "love"
+    },
+    {
+      "quote": "Only put off until tomorrow what you are willing to die having left undone.",
+      "category": "creativity"
+    },
+    {
+      "quote": "Don’t raise your voice, improve your argument.",
+      "category": "inspirational"
+    },
+    {
+      "quote": "Go the extra mile. It’s never crowded.",
+      "category": "funny"
+    },
+    {
+      "quote": "Kindness is a language the deaf can hear and the blind can see.",
+      "category": "motivational"
+    },
+    {
+      "quote": "Don’t be pushed around by the fears in your mind.",
+      "category": "wisdom"
+    },
+    {
+      "quote": "Believe you can and you're halfway there.",
+      "category": "life"
+    },
+    {
+      "quote": "Make each day your masterpiece.",
+      "category": "success"
+    },
+    {
+      "quote": "The best dreams happen when you’re awake.",
+      "category": "humor"
+    },
+    {
+      "quote": "Your time is limited, so don’t waste it living someone else’s life.",
+      "category": "philosophy"
+    },
+    {
+      "quote": "Happiness depends upon ourselves.",
+      "category": "love"
+    },
+    {
+      "quote": "A hero is someone who has given his or her life to something bigger than oneself.",
+      "category": "creativity"
+    },
+    {
+      "quote": "We can do anything we want to if we stick to it long enough.",
+      "category": "inspirational"
+    },
+    {
+      "quote": "When you know better, you do better.",
+      "category": "funny"
+    },
+    {
+      "quote": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+      "category": "motivational"
+    },
+    {
+      "quote": "Nothing great was ever achieved without enthusiasm.",
+      "category": "wisdom"
+    },
+    {
+      "quote": "You become what you believe.",
+      "category": "life"
+    },
+    {
+      "quote": "What we think, we become.",
+      "category": "success"
+    },
+    {
+      "quote": "Be so good they can’t ignore you.",
+      "category": "humor"
+    }
+  ]
+}
