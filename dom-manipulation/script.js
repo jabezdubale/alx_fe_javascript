@@ -7,6 +7,9 @@ const categoryFilter = document.getElementById("categoryFilter");
 showQuoteButton.addEventListener("click", showRandomQuote);
 downloadQuotes.addEventListener("click", exportJson);
 fetchQuotesFromServer();
+function fakeFetch() {
+  fetch("https://jsonplaceholder.typicode.com/posts");
+}
 async function fetchQuotesFromServer() {
   try {
     const response = await fetch("http://localhost:3000/quotes");
