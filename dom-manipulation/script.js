@@ -4,9 +4,14 @@ const showQuoteButton = document.getElementById("newQuote");
 const downloadQuotes = document.getElementById("exportQuotes");
 const categoryFilter = document.getElementById("categoryFilter");
 
+window.addEventListener("DOMContentLoaded", () => {
+  setInterval(fetchQuotesFromServer, 100000);
+});
 showQuoteButton.addEventListener("click", showRandomQuote);
 downloadQuotes.addEventListener("click", exportJson);
+
 fetchQuotesFromServer();
+
 function fakeFetch() {
   fetch("https://jsonplaceholder.typicode.com/posts");
 }
