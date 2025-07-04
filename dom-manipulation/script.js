@@ -21,10 +21,10 @@ async function fetchQuotesFromServer() {
     if (isDataSame === true) {
       populateCategories();
     } else {
-      const wantToMerge = confirm(
+      const syncQuotes = confirm(
         "Fetched quotes and your quotes are not similar. Do you want to make them similar?"
       );
-      if (wantToMerge) {
+      if (syncQuotes) {
         quotes = data;
         localStorage.setItem("quotes", JSON.stringify(quotes));
         populateCategories();
