@@ -146,6 +146,7 @@ function addQuote() {
   };
   quotes.push(quoteObject);
   localStorage.setItem("quotes", JSON.stringify(quotes));
+  poster(quoteObject);
   quoteRequest.value = "";
   catagoryRequest.value = "";
   populateCategories();
